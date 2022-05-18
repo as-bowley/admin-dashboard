@@ -13,17 +13,18 @@ body {
 .navbar {
     grid-row: 1 / 4;
     background-color: aqua;
-    border: 2px solid black;
     display: grid;
     
 }
 
 .header {
-    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 .control-bar {
-    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .main-content {
@@ -76,6 +77,85 @@ body {
 
 .container .navbar .nav-list-2 ul > li > img {
     padding-right: 10px;
+}
+
+.left-side-header {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.header button {
+    border: 0;
+    background-color: transparent;
+    height: fit-content;
+    width: fit-content;
+    padding-right: 20px;
+}
+
+.header input {
+    border-radius: 15px;
+    background-color:rgb(230, 229, 229) ;
+    border: 0;
+    width: 60%;
+    height: 25px;   
+}
+
+.right-side-header {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+.left-side-control {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.left-side-control button {
+    border: 0;
+    background-color: transparent;
+    height: fit-content;
+    width: fit-content;
+    padding-right: 20px;
+}
+
+.left-side-control button > img {
+    height: 70px;
+}
+
+.left-side-control .welcome-msg {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.left-side-control .welcome-msg .bigger {
+    font-size: 1.8em;
+}
+
+.right-size-control {
+    display: flex;
+    align-content: center;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-size-control button {
+    border: none;
+    border-radius: 15px;
+    background-color: aqua;
+    padding: 10px 30px;
+    margin: 7px;
+    font-weight: 700;
 }
 
 .main-content {
