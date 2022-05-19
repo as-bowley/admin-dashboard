@@ -12,23 +12,30 @@ body {
 
 .navbar {
     grid-row: 1 / 4;
-    background-color: aqua;
+    background-color: #046B99;
+    color: #B3EFFF;
     display: grid;
-    
 }
 
 .header {
     display: grid;
     grid-template-columns: 3fr 1fr;
+    min-height: 75px;
 }
 
 .control-bar {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    min-height: 100px;
 }
 
 .main-content {
-    border: 2px solid black;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    overflow-y: scroll;
+    background-color:rgb(230, 229, 229);
+    box-shadow: inset 1px 4px 2px -1px rgba(186,186,186,0.42);
 }
 
 .logo {
@@ -43,6 +50,7 @@ body {
     display: flex;
     align-items: center;
     padding-right: 10px;
+    filter: invert(82%) sepia(64%) saturate(547%) hue-rotate(174deg) brightness(105%) contrast(109%);
 }
 
 .container .navbar .nav-list-1 ul {
@@ -60,6 +68,7 @@ body {
 
 .container .navbar .nav-list-1 ul > li > img {
     padding-right: 10px;
+    filter: invert(82%) sepia(64%) saturate(547%) hue-rotate(174deg) brightness(105%) contrast(109%);
 }
 
 .container .navbar .nav-list-2 ul {
@@ -77,6 +86,7 @@ body {
 
 .container .navbar .nav-list-2 ul > li > img {
     padding-right: 10px;
+    filter: invert(82%) sepia(64%) saturate(547%) hue-rotate(174deg) brightness(105%) contrast(109%);
 }
 
 .left-side-header {
@@ -152,39 +162,105 @@ body {
 .right-size-control button {
     border: none;
     border-radius: 15px;
-    background-color: aqua;
+    background-color: #B3EFFF;
     padding: 10px 30px;
     margin: 7px;
     font-weight: 700;
 }
 
-.main-content {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 1fr;
+.main-content .main-title {
+    grid-column: 1 / 3;
 }
 
 .projects-container {
     grid-row: 1 / 3;
-    border: 2px solid black;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 15px 1fr 1fr 1fr;
     gap: 40px;
-    padding: 40px;
+    padding: 10px 40px 40px 40px;
+}
+
+.projects-title {
+    grid-column: 1 / 3;
+}
+
+.projects-container .projects-title > h2 {
+    font-size: 16px;
 }
 
 .projects-container  > .projects {
-    background-color: coral;
+    background-color: white;
+    border-left: 5px solid #046B99;
+    border-radius: 7px;
+    padding: 10px;
+    font-size: 14px;
+    box-shadow: 3px 6px 8px -3px rgba(163,163,163,1);
+}
+
+.projects-container .projects .projects-buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.projects-container .projects .projects-buttons > button {
+    background: transparent;
+    border: none;
 }
 
 .announcements {
     grid-column: 2 / 3;
-    border: 2px solid black;
+    display: grid;
+    grid-auto-flow: row;
+    max-height: 50%;
+    padding: 10px 30px 20px 20px;
+}
+.announcements .announcements-title > h2 {
+    font-size: 16px;
+    margin-bottom: 23px;
 }
 
-.trending {
+.announcements .announcement-msg-container {
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 3px 6px 8px -3px rgba(163,163,163,1);
+    padding: 10px;
+}
+
+.announcements .announcement-msg {
+    font-size: 12px;
+    border-top: 1px solid rgb(142, 141, 141);
+}
+
+.announcements .announcement-msg:first-child {
+    border-top: none;
+}
+
+.trending-container {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
-    border: 2px solid black;
+    padding: 10px 30px 20px 20px;
+}
+
+.trending-container .trending-title > h2{
+    font-size: 16px;
+    margin-bottom: 23px;
+}
+
+.trending-container .trending {
+    background-color: white;
+    border-radius: 7px;
+    box-shadow: 3px 6px 8px -3px rgba(163,163,163,1);
+    padding: 10px;
+    display: grid;
+    grid-auto-flow: row;
+}
+
+.trending-container .trending .usernames {
+    display: flex;
+}
+
+.trending-container .trending .usernames > button {
+    background: transparent;
+    border: none;
 }
